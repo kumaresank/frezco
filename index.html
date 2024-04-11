@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>FREZCO SPICES | Coming Soon</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<!--  -->
+	<div class="simpleslide100">
+		<div class="simpleslide100-item bg-img1" style="background-image: url('images/bg01.jpg');"></div>
+		<div class="simpleslide100-item bg-img1" style="background-image: url('images/bg02.jpg');"></div>
+		<div class="simpleslide100-item bg-img1" style="background-image: url('images/bg03.jpg');"></div>
+		<div class="simpleslide100-item bg-img1" style="background-image: url('images/bg04.jpg');"></div>
+		<div class="simpleslide100-item bg-img1" style="background-image: url('images/bg05.jpg');"></div>
+	</div>
+
+	<div class="size1 overlay1">
+		<!--  -->
+		<div class="size1 flex-col-c-m p-l-15 p-r-15 p-t-50 p-b-50">
+			<div class="logo-container">
+				<div class="logo" style="background-image: url('images/logo_full.svg')"></div>
+			</div>
+			<h3 class="l1-txt1 txt-center p-b-25">
+				Coming Soon
+			</h3>
+
+			<p class="m2-txt1 txt-center p-b-24">
+				Our website is under construction. You can expect this running sooooooon!
+			</p>
+			<p class="m2-txt1 txt-center p-b-24">
+				While we're busy setting up our website, you can still shop with ease through our WhatsApp Business profile!
+			</p>
+			<p class="m2-txt1 txt-center p-b-24 whatsapp-btn-container">
+				Message us now at
+				<a class="link-btn" target="_blank" href="https://api.whatsapp.com/send/?phone=919901899175&text=Hello%2C+I+am+interested+in+knowing+more+about+your++Products+and+would+like+order+some&type=phone_number&app_absent=0">
+					<img src="./images/logo-whatsapp.png" style="width: 32px;height: 32px;"/>
+					<span style="font-weight: bold;color: #f9ab05;font-family: Poppins-Bold">
+						+91 99018 99175
+					</span>
+				</a>
+				to place your order!...
+			</p>
+
+		</div>
+	</div>
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script >
+		
+    $('.simpleslide100').each(function(){
+        var delay = 3000;
+        var speed = 1000;
+        var itemSlide = $(this).find('.simpleslide100-item');
+        var nowSlide = 0;
+
+        $(itemSlide).hide();
+        $(itemSlide[nowSlide]).show();
+        nowSlide++;
+        if(nowSlide >= itemSlide.length) {nowSlide = 0;}
+
+        setInterval(function(){
+            $(itemSlide).fadeOut(speed);
+            $(itemSlide[nowSlide]).fadeIn(speed);
+            nowSlide++;
+            if(nowSlide >= itemSlide.length) {nowSlide = 0;}
+        },delay);
+    });
+	</script>
+<!--===============================================================================================-->
+</body>
+</html>
